@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Agricultural and Infrastructure Survey</name>
+    <description>Ground-truth field measurements for land and transport assets</description>
+    
+    <!-- Feature 1: Agricultural Polygon (Area calculation) -->
+    <Placemark id="plot_alpha">
+      <name>Plot Alpha - Wheat Plantation</name>
+      <description>High-yield irrigated plot</description>
+      <ExtendedData>
+        <Data name="crop_type"><value>Wheat</value></Data>
+        <Data name="irrigation"><value>Drip</value></Data>
+        <Data name="survey_date"><value>2026-03-15</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              77.4980,13.0010,0
+              77.5095,13.0010,0
+              77.5095,13.0115,0
+              77.4980,13.0115,0
+              77.4980,13.0010,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- Feature 2: Commercial Industrial Polygon (Area calculation) -->
+    <Placemark id="plot_beta">
+      <name>Plot Beta - Solar Facility</name>
+      <description>Solar photovoltaic park</description>
+      <ExtendedData>
+        <Data name="capacity_mw"><value>5.5</value></Data>
+        <Data name="grid_connected"><value>Yes</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              77.5150,13.0050,0
+              77.5250,13.0050,0
+              77.5250,13.0150,0
+              77.5150,13.0150,0
+              77.5150,13.0050,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- Feature 3: Canal LineString (Length calculation) -->
+    <Placemark id="canal_main">
+      <name>North Feeder Canal</name>
+      <description>Primary water distribution artery</description>
+      <ExtendedData>
+        <Data name="flow_rate_cusecs"><value>120</value></Data>
+        <Data name="lining_material"><value>Concrete</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>
+          77.4950,12.9980,0
+          77.5050,13.0040,0
+          77.5180,13.0080,0
+          77.5300,13.0120,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- Feature 4: Road LineString (Length calculation) -->
+    <Placemark id="service_road">
+      <name>Perimeter Access Road</name>
+      <description>Single-lane gravel road</description>
+      <ExtendedData>
+        <Data name="surface"><value>Gravel</value></Data>
+        <Data name="speed_limit_kph"><value>30</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>
+          77.5000,13.0000,0
+          77.5100,13.0000,0
+          77.5100,13.0120,0
+        </coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- Feature 5: Weather Station Point (Zero-dimension, graceful handling) -->
+    <Placemark id="weather_station_01">
+      <name>Telemetry Tower Alpha</name>
+      <description>Automated Weather Station (AWS)</description>
+      <ExtendedData>
+        <Data name="sensor_count"><value>14</value></Data>
+        <Data name="elevation_m"><value>920</value></Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>77.5042,13.0065,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- Feature 6: Ground Water Well Point (Zero-dimension, graceful handling) -->
+    <Placemark id="piezometer_well">
+      <name>Observation Borewell #4</name>
+      <description>Groundwater monitoring point</description>
+      <ExtendedData>
+        <Data name="water_table_depth_m"><value>45.2</value></Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>77.5210,13.0090,0</coordinates>
+      </Point>
+    </Placemark>
+
+  </Document>
+</kml>

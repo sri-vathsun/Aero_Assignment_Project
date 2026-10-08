@@ -1,0 +1,17 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Temporary uploads and system files
+temp_uploads/
+*.tmp
+.DS_Store
+Thumbs.db
